@@ -5,28 +5,12 @@ body {
     
 }
 
-
-.row .flag {
-  width: 22%;
-  height: 10em;
-  display: flex;
-  background-color: white;
-
-}
-
-.vertical-container .flag {
-  background-color: white;
-  display: flex;
-  width: 70%;
-  height: 10em;
-}
-
-
 main {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  
+  
 }
 
 .horizontal-container{
@@ -35,29 +19,39 @@ main {
     width: 75%;
     background-color: grey;  
     justify-content: space-around;
-
 }
 
 .row {
   display: flex;
   justify-content: space-around;
-
 }
 
 .vertical-container {
   display: flex;
   flex-direction: column;
   width: 25%;
-  background-color: red;
+  background-color: grey;
   justify-content: space-around;
-  align-items: center;
-  
-    
+  align-items: center;   
 }
 
-.vertical-container>div {
+.row .flag {
+  display: flex;
   background-color: white;
+  width: 22%;
+  height: 10em;
 }
+
+.vertical-container .flag {
+  display: flex;
+  background-color: white;
+  width: 70%;
+  height: 10em;
+  
+}
+
+
+
 
 /*Horizontal flags*/
 
@@ -76,28 +70,28 @@ main {
   height: 25%;
 }
 
+#two div, #three div {
+  height: 33.33%;
+}
+
 #two div:nth-child(2) {
-  height: 33.3%;
   background-color: white;
 }
 
 #two div:nth-child(odd) {
   background-color: lightskyblue;
-  height: 33.3%;
-}
+ }
 
 #three div:first-child {
-  height: 33.3%;
   background-color: black;
 }
 
 #three div:nth-child(2) {
   background-color: #DD0000;
-  height: 33.3%;
 }
+
 #three div:last-child {
-  background-color: #FFCC00;
-  height: 33.3%;
+ background-color: #FFCC00;
 }
 
 #four, #five {
@@ -105,28 +99,24 @@ main {
   justify-content: space-between;
 }
 
+#four div, #five div {
+  width: 33.3%;
+}
+
 #four div:first-child {
   background-color: #0055A4;
-  width: 33.3%;
-
 }
 
 #four div:last-child {
   background-color: #EF4135;
-  width: 33.3%;
-
 }
 
 #five div:first-child {
   background-color: #008c45 ;
-  width: 33.3%;
-
 }
 
 #five div:last-child {
   background-color: #cd212a;
-  width: 33.3%;
-
 }
 
 #six {
@@ -161,7 +151,6 @@ main {
   flex-wrap: wrap;
 }
 
-
 #eight div:first-child {
   background-color: #CE1126;
   height: 100%;
@@ -180,43 +169,36 @@ main {
   width: 70%;
 }
 
-
-
 #nine div:first-child {
   background-color: #FF0000;
   height: 100%;
   width: 30%;
   }
 
-  #nine div:nth-child(2) {
-    background-color:	#00843D;
-    height: 33.3%;
+#nine div:nth-child(n+2) {  /*(n+2) = all children starting from 2 */
+    height:33.3%;
     width: 70%;
-  }
+}
 
-  #nine div:nth-child(3) {
+#nine div:nth-child(2) {
+    background-color:	#00843D;
+}
+
+#nine div:nth-child(3) {
     background-color:white;
-    height: 33.3%;
-    width: 70%;
-  }
+}
   
 #nine div:last-child {
   background-color:black;
-  height: 33.3%;
-  width: 70%;
 }
-
-
-
 
 
 /*Vertical flags*/
 
-#ten {
+#ten, #eleven {
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center; 
 }
 
 #ten div {
@@ -226,18 +208,10 @@ main {
   border-radius: 50%;
 }
 
-
-#eleven {
-  display: flex;
- 
-}
-
-
 #eleven>div{   /*two horizontal containers*/
   display: flex;
   width: 100%;
   height: 100%;
-  
 }
 
 #eleven>div:first-child div{
@@ -264,8 +238,6 @@ main {
 #twelve div {
   width: 43%;
   height:40%
-  
-  
 }
 
 #twelve div:first-child, #twelve div:last-child {
@@ -277,7 +249,6 @@ main {
 }
 
 #thirteen {
-  display: flex;
   background: repeating-linear-gradient(
     #BB133E 0%,
     #BB133E 7.7%,
@@ -286,62 +257,25 @@ main {
     white 15.4%);
 } 
 
-#thirteen div {
-  /* display: flex;
+#thirteen>div {
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  align-content: flex-start;
-  align-items: flex-start; */
   height: 50%;
-  background-color: #0A3161;
   width: 48%;
+  background-color: #0A3161;
+  overflow: auto;
+}
+
+.starRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
-  background-image: url("star2.png");
-  background-size: 20%;
-}
-
-#thirteen div div{
-  width: 100%;
-  height: 25%;
-  /* background-color: green; */
-  border: 1px solid black;
-  background-image: url("star2.png");
-  background-position:center;
-
-  
-  
-}
-
-
-#thirteen div div:nth-child(even){
-  width: 100%;
-  height: 25%;
-  /* background-color: green; */
-  border: 1px solid orange;
-  background-image: url("star2.png");
-  background-repeat: repeat-x;
-  
-  
-  
-  
-}
-
-
-#thirteen div div:nth-child(even)::before{
-  content: "";
-  width: 5px;
-  background-color: #00843D;
-  display: block;
-
-}
-
-/* #thirteen div div:nth-child(even){
-  text-align: justify;
   font-size: 0.8em;
+  height:25%;
 }
 
-#thirteen div div:nth-child(even):after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-} */
+.starRow:nth-child(even){
+  justify-content: space-evenly;
+ }
+
