@@ -137,11 +137,11 @@ main {
 
 #seven  {
    background: repeating-linear-gradient(
-    #CE0000 0%,
-    #CE0000 11.11%,
-    #CE0000 11.11%,
-    #ffd900 11.11%, 
-    #ffd900 22.22%);
+    #ffd900  0%,
+    #ffd900  11.11%,
+    #ffd900  11.11%,
+    #CE0000  11.11%, 
+    #CE0000  22.22%);
 }
 
 
